@@ -11,7 +11,7 @@ public class WaterDrop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Material.SetFloat("_Size", 1.0f);
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class WaterDrop : MonoBehaviour
             Debug.Log("it hit");
             float actualSize = Material.GetFloat("_Size");
             if (actualSize < 0.2f){
-                Debug.Log("bajo");
+                Debug.Log("Destroy Object");
             }
             else{
                 Material.SetFloat("_Size", actualSize * DecreaseIndex);

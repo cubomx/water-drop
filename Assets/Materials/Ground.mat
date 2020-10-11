@@ -84,18 +84,18 @@ Material:
     - _WaveAmp_5: 0
     - _WaveAmp_6: 0
     - _ZWrite: 1
-    - _offsetX1: 4.49
-    - _offsetX2: 4.49
-    - _offsetX3: 4.49
-    - _offsetX4: 4.49
-    - _offsetX5: 4.49
-    - _offsetX6: 0
-    - _offsetZ1: -10.58
-    - _offsetZ2: -10.58
-    - _offsetZ3: -10.58
-    - _offsetZ4: -10.58
-    - _offsetZ5: -10.58
-    - _offsetZ6: 0
+    - _offsetX1: 2
+    - _offsetX2: 2
+    - _offsetX3: 2
+    - _offsetX4: 2
+    - _offsetX5: 2
+    - _offsetX6: 2
+    - _offsetZ1: -0.000000022658696
+    - _offsetZ2: 0.0000014325433
+    - _offsetZ3: 0.000002576951
+    - _offsetZ4: -0.000000022658696
+    - _offsetZ5: 0.0000014325433
+    - _offsetZ6: 0.000002576951
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
