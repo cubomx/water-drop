@@ -56,22 +56,41 @@
                 view._m00 = 1.0f;
                 view._m10 = 0.0f;
                 view._m20 = 0.0f;
+                view._m30 = 0.0f;
  
                 // Second colunm.
                 view._m01 = 0.0f;
                 view._m11 = 1.0f;
                 view._m21 = 0.0f;
+                view._m31 = 0.0f;
  
                 // Thrid colunm.
                 view._m02 = 0.0f;
                 view._m12 = 0.0f;
                 view._m22 = 1.0f;
- 
+                view._m32 = 0.0f;
+
+                
+                /* Because we are using the view matrix, it is important 
+                   to calculate the distance. If we don't change this,
+                   the object may appear much nearer that it should be. 
+                */
                 if(_IsConstSize > 0)
                     v.vertex.w /= dist;
 
                 // Change the values to perfom scaling
+                
+                if (v.vertex.y > 0.0f){
+                    v.vertex.x *= 0.7;
+                    v.vertex.z *= 0.7;
+                }
+                else{
+                    v.vertex.x *= 0.9;
+                    v.vertex.z *= 0.9;
+                }
 
+
+                // scale with this
                 v.vertex.w /= (_Size * 0.1);
  
                 o.vertex = mul(UNITY_MATRIX_P, mul(view, v.vertex ) );

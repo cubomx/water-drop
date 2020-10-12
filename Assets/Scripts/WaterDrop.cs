@@ -11,7 +11,7 @@ public class WaterDrop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Material.SetFloat("_Size", 1.0f);
+        Material.SetFloat("_Size", 0.5f);
     }
 
     // Update is called once per frame
@@ -21,16 +21,14 @@ public class WaterDrop : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
+        // Detecting if it collides with the water surface
         if (other.gameObject.tag == TagSurface){
             Debug.Log("it hit");
             float actualSize = Material.GetFloat("_Size");
-            if (actualSize < 0.2f){
-                Debug.Log("Destroy Object");
-            }
-            else{
+            // Then, decrease the size of the wate drop depending of its actual size
+            if (actualSize > 0.1f){
                 Material.SetFloat("_Size", actualSize * DecreaseIndex);
-            }
-            
+            }   
         }
     }
 }
